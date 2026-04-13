@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arijit Bhattacharjee — Senior Software Engineer</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #ffffff;
+    --bg2: #f7f7f5;
+    --bg3: #f0efeb;
+    --text: #1a1a18;
+    --muted: #5a5a56;
+    --faint: #8a8a84;
+    --border: #e2e1db;
+    --accent: #2563eb;
+    --accent-light: #eff4ff;
+    --teal: #0f6e56;
+    --teal-light: #e1f5ee;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #18181a;
+      --bg2: #222224;
+      --bg3: #2a2a2c;
+      --text: #e8e8e4;
+      --muted: #a0a09a;
+      --faint: #686862;
+      --border: #38383c;
+      --accent: #60a5fa;
+      --accent-light: #1e2a3a;
+      --teal: #5dcaa5;
+      --teal-light: #0a2e22;
+    }
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    padding: 3rem 0 2rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2rem;
+  }
+
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+  }
+
+  .header .title-line {
+    font-size: 15px;
+    color: var(--teal);
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  .contact-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .contact-row span::before {
+    content: '';
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: var(--teal-light);
+    color: var(--teal);
+    font-weight: 500;
+    border: 1px solid var(--teal);
+    margin-top: 10px;
+  }
+
+  /* ── SUMMARY ── */
+  .summary {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--muted);
+    border-left: 3px solid var(--teal);
+    padding-left: 16px;
+    margin-bottom: 2.5rem;
+  }
+
+  /* ── SECTIONS ── */
+  .section { margin-bottom: 2.5rem; }
+
+  .section-title {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--faint);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 6px;
+    margin-bottom: 1.25rem;
+  }
+
+  /* ── SKILLS ── */
+  .skills-table {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 8px 16px;
+  }
+
+  .sk-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    padding-top: 1px;
+  }
+
+  .sk-val {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  /* ── EXPERIENCE ── */
+  .role { margin-bottom: 2rem; }
+
+  .role-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 2px;
+  }
+
+  .role-title { font-size: 15px; font-weight: 600; }
+
+  .role-date {
+    font-size: 12px;
+    color: var(--faint);
+    white-space: nowrap;
+  }
+
+  .role-company {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 10px;
+  }
+
+  .role ul {
+    padding-left: 1.1rem;
+    list-style: disc;
+  }
+
+  .role ul li {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.65;
+    margin-bottom: 6px;
+  }
+
+  .role ul li strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  /* ── PROJECTS ── */
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+  }
+
+  .proj-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+  }
+
+  .proj-card h3 {
+    font-size: 13.5px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--text);
+  }
+
+  .proj-card p {
+    font-size: 12.5px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 8px;
+  }
+
+  .proj-tech {
+    font-size: 11px;
+    color: var(--faint);
+  }
+
+  /* ── EDUCATION ── */
+  .edu-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .edu-title { font-size: 14px; font-weight: 500; }
+  .edu-date { font-size: 12px; color: var(--faint); }
+  .edu-sub { font-size: 13px; color: var(--muted); margin-top: 2px; }
+
+  /* ── FOOTER ── */
+  .footer {
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    font-size: 12px;
+    color: var(--faint);
+  }
+
+  @media (max-width: 600px) {
+    .header h1 { font-size: 22px; }
+    .skills-table { grid-template-columns: 1fr; }
+    .sk-label { color: var(--faint); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
+    .role-header { flex-direction: column; gap: 2px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <div>
+        <h1>Arijit Bhattacharjee</h1>
+        <div class="title-line">Senior Software Engineer</div>
+        <div class="contact-row">
+          <span>Bengaluru, India</span>
+          <span>7005467390</span>
+          <span><a href="mailto:arijit1201@gmail.com">arijit1201@gmail.com</a></span>
+        </div>
+        <!-- <div><span class="badge">Azure Fundamentals Certified</span></div> -->
+      </div>
+    </div>
+  </header>
+
+  <!-- SUMMARY -->
+  <div class="summary">
+    Senior Software Engineer with 5+ years of experience building and scaling distributed backend systems,
+    event-driven architectures, and cloud-native platforms. Strong foundation in Java and Spring Boot, with
+    hands-on depth in Kafka-based streaming, serverless compute, config-driven transformation, and distributed
+    NoSQL data stores. Track record of owning complex technical deliverables end to end — from design through
+    production — while improving system reliability, developer productivity, and cloud cost efficiency.
+    Experienced in mentoring engineers, driving quality and DevOps practices, and applying AI pragmatically
+    to accelerate modernisation and automation.
+  </div>
+
+  <!-- SKILLS -->
+  <section class="section">
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-table">
+      <span class="sk-label">Languages</span>
+      <span class="sk-val">Java (primary), Python, JavaScript / Node.js, SQL</span>
+
+      <span class="sk-label">Frameworks</span>
+      <span class="sk-val">Spring Boot, Spring, GraphQL (Apollo Server), JUnit, Next.js, Flask, FastAPI</span>
+
+      <span class="sk-label">Distributed systems</span>
+      <span class="sk-val">Apache Kafka — batch + parallel consumer design, pipeline ownership, load testing; Azure Event Hubs; event-driven architecture; config-driven transformation (JOLT, JSON Schema)</span>
+
+      <span class="sk-label">Databases</span>
+      <span class="sk-val">Cosmos DB (NoSQL), MongoDB, MySQL, Redis (caching layer)</span>
+
+      <span class="sk-label">Cloud / infra</span>
+      <span class="sk-val">Azure — Functions, Logic Apps, Blob, APIM, AKS, OpenAI, Resource Graph, Monitor; AWS (familiar); Docker; Kubernetes; OpenShift</span>
+
+      <span class="sk-label">DevOps & quality</span>
+      <span class="sk-val">Jenkins, GitHub Actions, AccelQ, SonarQube, CI/CD pipeline design, Postman, Dynatrace</span>
+
+      <span class="sk-label">AI / automation</span>
+      <span class="sk-val">Azure OpenAI, Gemini, Ollama, RAG concepts, Python automation scripting, GenAI-augmented engineering</span>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="section">
+    <div class="section-title">Professional Experience</div>
+
+    <div class="role">
+      <div class="role-header">
+        <span class="role-title">Senior Software Engineer</span>
+        <span class="role-date">Mar 2024 – Present</span>
+      </div>
+      <div class="role-company">Optum · Hyderabad / Bengaluru</div>
+      <ul>
+        <li><strong>Architected a configuration-driven event processing layer</strong> for high-volume distributed workflows — externalising transformation rules, validation schemas, and routing configuration into a blob store, enabling new integration onboarding with zero code changes and reducing time-to-production significantly.</li>
+        <li><strong>Designed and implemented Kafka → serverless ingestion pipelines</strong> handling polymorphic, high-throughput payloads; owned fault-tolerance strategy, dead-letter handling, and consumer performance tuning end to end.</li>
+        <li>Built a <strong>Python-based load testing framework</strong> for distributed event-driven flows — validated consumer throughput, lag behaviour, and failure-recovery under realistic production-scale load, directly informing architectural and infrastructure decisions.</li>
+        <li><strong>Optimised distributed system performance</strong> via Kafka batch consumption, parallel processing, and Redis caching for NoSQL operations — measurably reducing latency across high-volume asynchronous workflows.</li>
+        <li>Developed Node.js microservices and GraphQL APIs to support modern integration and data access patterns alongside serverless orchestration workflows.</li>
+        <li><strong>Led AI-assisted analysis of 400+ legacy cloud assets</strong> using cloud management APIs and Azure OpenAI — automated business logic extraction and classification at scale, produced a structured decommissioning roadmap, saving hundreds of hours of manual engineering effort.</li>
+        <li>Delivered enhancements across multiple platform domains — scheduling APIs, disruption management, data pipelines, and communication workflows — including API updates, downstream integrations, retry/reprocessing logic, and observability improvements.</li>
+        <li>Resolved critical production security vulnerabilities; drove cloud cost optimisation through systematic decommissioning of deprecated serverless resources using Resource Graph and Monitor analytics.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-header">
+        <span class="role-title">Software Engineer</span>
+        <span class="role-date">Jul 2020 – Mar 2024</span>
+      </div>
+      <div class="role-company">Optum · Hyderabad</div>
+      <ul>
+        <li><strong>Architected reusable, configuration-driven serverless components</strong> consumed across multiple platform orchestrations — modular design contributed to <strong>$600K+ in annual savings</strong> through automated resource orchestration and reduced duplication.</li>
+        <li>Delivered <strong>3 platform innovations adopted organisation-wide</strong> (~$200K estimated impact each): a global reusable events API, a config-driven event mapping function, and a config-driven NoSQL persistence utility — standardising shared engineering patterns across teams.</li>
+        <li><strong>Developed and enhanced Java/Spring Boot backend APIs</strong> spanning member preferences, notifications, household access, scheduling, medication, and pricing workflows — integrating multiple enterprise downstream systems into stable, tested API contracts.</li>
+        <li>Designed and implemented CI/CD pipelines in Jenkins and GitHub Actions; integrated end-to-end automated testing for asynchronous workflows — achieving and sustaining <strong>90%+ code coverage and Quality Gate 8+ compliance</strong> as formal team MBO targets.</li>
+        <li>Improved Kafka consumer services through batch consumption and parallel processing; built Python and JavaScript automation scripts for bulk data operations and large-scale workload failure analysis across tens of thousands of records.</li>
+        <li>Led migration of workflow orchestrations to a standardised, more maintainable runtime, improving operational consistency and deployment reliability across teams.</li>
+        <li>Mentored junior engineers and new joiners; authored internal documentation and reusable pattern libraries; owned production incident resolution on high-visibility platform releases end to end.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="section">
+    <div class="section-title">Technical Projects</div>
+    <div class="projects-grid">
+
+      <div class="proj-card">
+        <h3>Smart Customer Intelligence Platform</h3>
+        <p>Predictive churn and LTV forecasting platform with CTGAN synthetic data generation (88% fidelity), ensemble model selection (XGBoost, Random Forest), Keras autoencoder for segmentation (+67% Silhouette Score), SHAP interpretability, and Streamlit dashboard with real-time inference.</p>
+        <div class="proj-tech">Python · XGBoost · TensorFlow/Keras · CTGAN · SHAP · Streamlit</div>
+      </div>
+
+      <div class="proj-card">
+        <h3>InfernalCV — LLM-powered document analyser</h3>
+        <p>Modular multi-provider LLM inference tool with PDF/DOCX parsing and routing across Gemini, OpenRouter, and Ollama. Practical demonstration of LLM system design and multi-model orchestration.</p>
+        <div class="proj-tech">Python · Streamlit · PyPDF2 · Azure OpenAI · Gemini · Ollama</div>
+      </div>
+
+      <div class="proj-card">
+        <h3>Full-stack social platform</h3>
+        <p>Decoupled Next.js frontend with Spring Boot microservices backend, JWT authentication, and MongoDB data layer for user relationships and media metadata.</p>
+        <div class="proj-tech">React · Next.js · Spring Boot · MongoDB · Redux Toolkit · TailwindCSS</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section class="section">
+    <div class="section-title">Education</div>
+    <div class="edu-row">
+      <span class="edu-title">B.Tech, Computer Science and Engineering</span>
+      <span class="edu-date">2016 – 2020</span>
+    </div>
+    <div class="edu-sub">National Institute of Technology Jamshedpur &nbsp;·&nbsp; CGPA: 8.80 / 10</div>
+  </section>
+
+  <div class="footer">
+    arijit1201@gmail.com &nbsp;·&nbsp; Bengaluru, India &nbsp;·&nbsp; Last updated April 2026
+  </div>
+
+</div>
+</body>
+</html>
