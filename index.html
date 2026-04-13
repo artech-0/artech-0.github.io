@@ -3,6 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Arijit Bhattacharjee - Senior Software Engineer & Architect. 5+ years of experience in Java, Spring Boot, Kafka, and distributed systems.">
+<meta property="og:title" content="Arijit Bhattacharjee — Senior Software Engineer">
+<meta property="og:description" content="Senior Software Engineer with 5+ years of end-to-end ownership across distributed backend systems and event-driven cloud platforms.">
+<meta property="og:type" content="website">
+
 <title>Arijit Bhattacharjee — Senior Software Engineer</title>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -106,6 +111,23 @@
     border: 1px solid var(--teal);
     margin-top: 10px;
   }
+  
+  /* ── BUTTON ── */
+  .btn-download {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--bg);
+    background: var(--text);
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .btn-download:hover {
+    opacity: 0.8;
+    text-decoration: none;
+  }
 
   /* ── SUMMARY ── */
   .summary {
@@ -115,6 +137,10 @@
     border-left: 3px solid var(--teal);
     padding-left: 16px;
     margin-bottom: 2.5rem;
+  }
+  .summary strong {
+    color: var(--text);
+    font-weight: 600;
   }
 
   /* ── SECTIONS ── */
@@ -140,7 +166,7 @@
 
   .sk-label {
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text);
     padding-top: 1px;
   }
@@ -191,7 +217,7 @@
 
   .role ul li strong {
     color: var(--text);
-    font-weight: 500;
+    font-weight: 600;
   }
 
   /* ── PROJECTS ── */
@@ -251,6 +277,7 @@
   }
 
   @media (max-width: 600px) {
+    .header-inner { flex-direction: column; gap: 1rem; }
     .header h1 { font-size: 22px; }
     .skills-table { grid-template-columns: 1fr; }
     .sk-label { color: var(--faint); font-size: 11px; text-transform: uppercase; letter-spacing: .05em; }
@@ -271,21 +298,20 @@
           <span>Bengaluru, India</span>
           <span>7005467390</span>
           <span><a href="mailto:arijit1201@gmail.com">arijit1201@gmail.com</a></span>
+          <span><a href="https://www.linkedin.com/in/arijit-bhattacharjee-dev/" target="_blank">LinkedIn</a></span>
+          <span><a href="https://github.com/artech-0/" target="_blank">GitHub</a></span>
         </div>
         <!-- <div><span class="badge">Azure Fundamentals Certified</span></div> -->
+      </div>
+      <div>
+        <a href="Arijit_Bhattacharjee_Resume.pdf" class="btn-download" download>Download PDF</a>
       </div>
     </div>
   </header>
 
   <!-- SUMMARY -->
   <div class="summary">
-    Senior Software Engineer with 5+ years of experience building and scaling distributed backend systems,
-    event-driven architectures, and cloud-native platforms. Strong foundation in Java and Spring Boot, with
-    hands-on depth in Kafka-based streaming, serverless compute, config-driven transformation, and distributed
-    NoSQL data stores. Track record of owning complex technical deliverables end to end — from design through
-    production — while improving system reliability, developer productivity, and cloud cost efficiency.
-    Experienced in mentoring engineers, driving quality and DevOps practices, and applying AI pragmatically
-    to accelerate modernisation and automation.
+    Senior Software Engineer with 5+ years of <strong>end-to-end ownership</strong> across distributed backend systems, event-driven cloud platforms, and large-scale API orchestration. <strong>Led architecture and delivery</strong> of config-driven transformation layers, high-throughput Kafka pipelines, and AI-assisted cloud modernisation programs. Proven ability to <strong>drive technical decisions from conception through production</strong>, mentor engineers across experience levels, and collaborate effectively across geo-distributed, cross-functional teams. Strong foundation in Java and Node.js with deep cloud-native experience on Azure and hands-on depth in distributed NoSQL stores, streaming systems, and serverless design patterns.
   </div>
 
   <!-- SKILLS -->
@@ -293,25 +319,28 @@
     <div class="section-title">Technical Skills</div>
     <div class="skills-table">
       <span class="sk-label">Languages</span>
-      <span class="sk-val">Java (primary), Python, JavaScript / Node.js, SQL</span>
+      <span class="sk-val">Java (primary), Node.js / JavaScript, Python, SQL</span>
 
       <span class="sk-label">Frameworks</span>
       <span class="sk-val">Spring Boot, Spring, GraphQL (Apollo Server), JUnit, Next.js, Flask, FastAPI</span>
 
-      <span class="sk-label">Distributed systems</span>
-      <span class="sk-val">Apache Kafka — batch + parallel consumer design, pipeline ownership, load testing; Azure Event Hubs; event-driven architecture; config-driven transformation (JOLT, JSON Schema)</span>
+      <span class="sk-label">Architecture</span>
+      <span class="sk-val">Event-driven architecture, config-driven transformation (JOLT, JSON Schema), serverless orchestration, API gateway patterns</span>
 
-      <span class="sk-label">Databases</span>
-      <span class="sk-val">Cosmos DB (NoSQL), MongoDB, MySQL, Redis (caching layer)</span>
+      <span class="sk-label">Data Stores</span>
+      <span class="sk-val">Cosmos DB (NoSQL — partitioning, consistency models, TTL, Redis caching layer), MongoDB, MySQL, Redis</span>
 
-      <span class="sk-label">Cloud / infra</span>
-      <span class="sk-val">Azure — Functions, Logic Apps, Blob, APIM, AKS, OpenAI, Resource Graph, Monitor; AWS (familiar); Docker; Kubernetes; OpenShift</span>
+      <span class="sk-label">Streaming & Events</span>
+      <span class="sk-val">Apache Kafka (consumer group design, batch + parallel processing, throughput load testing, pipeline architecture), Azure Event Hubs</span>
 
-      <span class="sk-label">DevOps & quality</span>
-      <span class="sk-val">Jenkins, GitHub Actions, AccelQ, SonarQube, CI/CD pipeline design, Postman, Dynatrace</span>
+      <span class="sk-label">Cloud Platforms</span>
+      <span class="sk-val">Azure (Functions, Logic Apps, Blob, APIM, AKS, OpenAI, Resource Graph, Monitor), AWS (familiar)</span>
 
-      <span class="sk-label">AI / automation</span>
-      <span class="sk-val">Azure OpenAI, Gemini, Ollama, RAG concepts, Python automation scripting, GenAI-augmented engineering</span>
+      <span class="sk-label">DevOps & Delivery</span>
+      <span class="sk-val">Docker, Kubernetes, OpenShift, Jenkins, GitHub Actions, AccelQ, CI/CD pipeline design, SonarQube</span>
+
+      <span class="sk-label">AI & ML</span>
+      <span class="sk-val">LLM integration (Azure OpenAI, Gemini, Ollama), RAG, GenAI-augmented engineering, Python ML scripting</span>
     </div>
   </section>
 
@@ -326,14 +355,14 @@
       </div>
       <div class="role-company">Optum · Hyderabad / Bengaluru</div>
       <ul>
-        <li><strong>Architected a configuration-driven event processing layer</strong> for high-volume distributed workflows — externalising transformation rules, validation schemas, and routing configuration into a blob store, enabling new integration onboarding with zero code changes and reducing time-to-production significantly.</li>
-        <li><strong>Designed and implemented Kafka → serverless ingestion pipelines</strong> handling polymorphic, high-throughput payloads; owned fault-tolerance strategy, dead-letter handling, and consumer performance tuning end to end.</li>
-        <li>Built a <strong>Python-based load testing framework</strong> for distributed event-driven flows — validated consumer throughput, lag behaviour, and failure-recovery under realistic production-scale load, directly informing architectural and infrastructure decisions.</li>
-        <li><strong>Optimised distributed system performance</strong> via Kafka batch consumption, parallel processing, and Redis caching for NoSQL operations — measurably reducing latency across high-volume asynchronous workflows.</li>
-        <li>Developed Node.js microservices and GraphQL APIs to support modern integration and data access patterns alongside serverless orchestration workflows.</li>
-        <li><strong>Led AI-assisted analysis of 400+ legacy cloud assets</strong> using cloud management APIs and Azure OpenAI — automated business logic extraction and classification at scale, produced a structured decommissioning roadmap, saving hundreds of hours of manual engineering effort.</li>
-        <li>Delivered enhancements across multiple platform domains — scheduling APIs, disruption management, data pipelines, and communication workflows — including API updates, downstream integrations, retry/reprocessing logic, and observability improvements.</li>
-        <li>Resolved critical production security vulnerabilities; drove cloud cost optimisation through systematic decommissioning of deprecated serverless resources using Resource Graph and Monitor analytics.</li>
+        <li><strong>Owned architecture and end-to-end delivery</strong> of a configuration-driven event processing layer for high-volume distributed workflows—externalising JOLT transformation rules, JSON Schema validation, and routing config into a blob store, enabling zero-code partner onboarding and significantly reducing time-to-production for new integrations.</li>
+        <li><strong>Designed and implemented Kafka → serverless ingestion pipelines</strong> handling polymorphic, high-throughput payloads; <strong>led all architectural decisions</strong> around fault tolerance, dead-letter handling, payload validation, and consumer performance tuning from design through production.</li>
+        <li><strong>Architected a Python-based load testing framework</strong> for distributed event pipelines—validated consumer throughput, lag behaviour, and failure recovery under production-scale load; used results to drive infrastructure and tuning decisions.</li>
+        <li><strong>Led AI-assisted modernisation</strong> of 400+ legacy cloud assets—designed the extraction and classification pipeline using cloud management APIs and Azure OpenAI, synthesised business logic at scale, and produced a structured decommissioning roadmap saving hundreds of hours of manual engineering effort.</li>
+        <li>Built Node.js microservices and GraphQL APIs for modern data access patterns; introduced Redis caching and parallelised Kafka batch consumption to optimise throughput across distributed systems.</li>
+        <li>Drove cloud cost reduction through systematic identification and decommissioning of deprecated serverless resources; resolved critical security vulnerabilities across distributed event processing platforms.</li>
+        <li><strong>Collaborated with product managers, engineers, and business stakeholders</strong> across multiple platform domains (scheduling, disruption management, data pipelines, and communication workflows), delivering cross-functional initiatives end to end.</li>
+        <li>Embedded GenAI tooling into daily engineering workflows (pair programming, unit test generation, debugging, prototyping); <strong>actively mentored peers</strong> in pragmatic AI adoption.</li>
       </ul>
     </div>
 
@@ -344,13 +373,14 @@
       </div>
       <div class="role-company">Optum · Hyderabad</div>
       <ul>
-        <li><strong>Architected reusable, configuration-driven serverless components</strong> consumed across multiple platform orchestrations — modular design contributed to <strong>$600K+ in annual savings</strong> through automated resource orchestration and reduced duplication.</li>
-        <li>Delivered <strong>3 platform innovations adopted organisation-wide</strong> (~$200K estimated impact each): a global reusable events API, a config-driven event mapping function, and a config-driven NoSQL persistence utility — standardising shared engineering patterns across teams.</li>
-        <li><strong>Developed and enhanced Java/Spring Boot backend APIs</strong> spanning member preferences, notifications, household access, scheduling, medication, and pricing workflows — integrating multiple enterprise downstream systems into stable, tested API contracts.</li>
-        <li>Designed and implemented CI/CD pipelines in Jenkins and GitHub Actions; integrated end-to-end automated testing for asynchronous workflows — achieving and sustaining <strong>90%+ code coverage and Quality Gate 8+ compliance</strong> as formal team MBO targets.</li>
-        <li>Improved Kafka consumer services through batch consumption and parallel processing; built Python and JavaScript automation scripts for bulk data operations and large-scale workload failure analysis across tens of thousands of records.</li>
-        <li>Led migration of workflow orchestrations to a standardised, more maintainable runtime, improving operational consistency and deployment reliability across teams.</li>
-        <li>Mentored junior engineers and new joiners; authored internal documentation and reusable pattern libraries; owned production incident resolution on high-visibility platform releases end to end.</li>
+        <li><strong>Architected reusable, configuration-driven serverless components</strong> serving multiple workflow orchestrations across the platform—modular design and automated resource orchestration contributed to <strong>$600K+ in annual savings</strong>.</li>
+        <li>Delivered 3 platform innovations adopted organisation-wide (~$200K estimated impact each): a global reusable events API, a config-driven event mapping function, and a config-driven NoSQL persistence utility—standardising shared patterns and reducing engineering duplication across teams.</li>
+        <li><strong>Led migration of workflow orchestrations</strong> to a standardised runtime, improving operational consistency, maintainability, and deployment reliability across <strong>geo-distributed teams</strong>.</li>
+        <li>Developed and enhanced Java/Spring Boot backend APIs across member preferences, notifications, household access, scheduling, medication, and pricing domains—integrating multiple enterprise systems into stable, versioned API contracts.</li>
+        <li>Designed CI/CD pipelines in Jenkins and GitHub Actions; integrated end-to-end automated testing for asynchronous workflows—achieving and sustaining 90%+ code coverage and Quality Gate 8+ compliance.</li>
+        <li>Improved Kafka consumer performance through batch consumption and parallel processing; automated large-scale operational tasks including bulk data processing and workload failure analysis.</li>
+        <li><strong>Mentored engineers at multiple levels</strong>—guided new joiners through complex analysis and production releases, served as Buddy resource, authored reusable documentation; consistently acknowledged in annual evaluations for enabling team delivery and knowledge sharing.</li>
+        <li><strong>Owned production incident resolution</strong> on high-visibility platform releases end to end; took accountability for critical technical blockers without escalation.</li>
       </ul>
     </div>
   </section>
@@ -362,19 +392,19 @@
 
       <div class="proj-card">
         <h3>Smart Customer Intelligence Platform</h3>
-        <p>Predictive churn and LTV forecasting platform with CTGAN synthetic data generation (88% fidelity), ensemble model selection (XGBoost, Random Forest), Keras autoencoder for segmentation (+67% Silhouette Score), SHAP interpretability, and Streamlit dashboard with real-time inference.</p>
+        <p>End-to-end predictive platform: CTGAN synthetic data generation (88% fidelity), ensemble model selection (XGBoost, Random Forest), Keras autoencoder for customer segmentation (+67% Silhouette Score), SHAP for model interpretability, Streamlit dashboard with real-time inference and market basket analysis.</p>
         <div class="proj-tech">Python · XGBoost · TensorFlow/Keras · CTGAN · SHAP · Streamlit</div>
       </div>
 
       <div class="proj-card">
         <h3>InfernalCV — LLM-powered document analyser</h3>
-        <p>Modular multi-provider LLM inference tool with PDF/DOCX parsing and routing across Gemini, OpenRouter, and Ollama. Practical demonstration of LLM system design and multi-model orchestration.</p>
+        <p>Modular multi-provider LLM inference tool with PDF/DOCX parsing and routing across Gemini, OpenRouter, and Ollama. Demonstrates practical LLM system design and multi-model orchestration.</p>
         <div class="proj-tech">Python · Streamlit · PyPDF2 · Azure OpenAI · Gemini · Ollama</div>
       </div>
 
       <div class="proj-card">
         <h3>Full-stack social platform</h3>
-        <p>Decoupled Next.js frontend with Spring Boot microservices backend, JWT authentication, and MongoDB data layer for user relationships and media metadata.</p>
+        <p>Spring Boot microservices backend with JWT auth and MongoDB data layer, paired with a decoupled Next.js/Redux frontend—<strong>end-to-end full-stack ownership</strong> from data model to UI state management.</p>
         <div class="proj-tech">React · Next.js · Spring Boot · MongoDB · Redux Toolkit · TailwindCSS</div>
       </div>
 
